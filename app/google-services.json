@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "60233045600",
+    "project_id": "dday-42e1e",
+    "storage_bucket": "dday-42e1e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:60233045600:android:287ff018dacb60290e1505",
+        "android_client_info": {
+          "package_name": "com.example.dday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "60233045600-9m5tu14rsk67tg5cn7bn1p3et22v80pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC31Wgx_8-6fKQQnVd03Z1_OPk3r1Fo7OM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "60233045600-9m5tu14rsk67tg5cn7bn1p3et22v80pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
