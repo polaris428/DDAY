@@ -38,20 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         TextView text=(TextView)findViewById(R.id.text);
 
-        countDownTimer = new CountDownTimer(20000000,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                //tv_timer.setText(getTime());
-                text.setText(countdday(yy, hh,dd )+"일 "+getTime());
-                Log.d(TAG, "Value is: " + getTime());
-            }
 
-            @Override
-            public void onFinish() {
-
-            }
-        };
-        countDownTimer.start();
 
         DatabaseReference myRef = database.getReference("a");
         DatabaseReference myRef2 = database.getReference("b");
@@ -82,8 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 Integer value = dataSnapshot.getValue(Integer.class);
                 hh= dataSnapshot.getValue(Integer.class);
-                Log.d(TAG, "Value is: " + value);
                 countdday(yy, hh,dd );
+                Log.d(TAG, "Value is: " + value);
+
             }
 
             @Override
@@ -100,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
                 // whenever data at this location is updated.
                 Integer value = dataSnapshot.getValue(Integer.class);
                 dd= dataSnapshot.getValue(Integer.class);
+
                 Log.d(TAG, "Value is: " + value);
 
 
@@ -112,7 +101,20 @@ public class MainActivity extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+        countDownTimer = new CountDownTimer(20000000,1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                //tv_timer.setText(getTime());
+                text.setText(countdday(yy, hh,dd )+"일 "+getTime());
+                Log.d(TAG, "Value is: " + getTime());
+            }
 
+            @Override
+            public void onFinish() {
+
+            }
+        };
+        countDownTimer.start();
     }
 
     public int countdday(int myear, int mmonth, int mday) {
@@ -130,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
             long today = todaCal.getTimeInMillis()/86400000; //->(24 * 60 * 60 * 1000) 24시간 60분 60초 * (ms초->초 변환 1000)
             long dday = ddayCal.getTimeInMillis()/86400000;
             long count = dday - today; // 오늘 날짜에서 dday 날짜를 빼주게 됩니다.
-            Log.d(TAG,"Value : "+count);
             return (int) count;
 
         }
