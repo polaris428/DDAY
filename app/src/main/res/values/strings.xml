@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">DDAY</string>
+    <string name="a">할 수 있어!</string>
+    <string name="a1">인생의 주인공은 너야!</string>
+    <string name="a2">꿈을 이루자</string>
+    <string name="a3">너가 꿈을 꿀때 라이벌은 꿈을 이룬다</string>
+    <string name="a4">다 잘될꺼야</string>
+    <string name="a5">좀만 더 노력 하자</string>
+    <string name="a6">오늘 걸으면 내일은 뛰어야한다</string>
 </resources>

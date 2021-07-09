@@ -37,6 +37,10 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
         TextView text=(TextView)findViewById(R.id.text);
+        TextView text2=(TextView)findViewById(R.id.text2);
+
+        int ran = (int) (Math.random() * 6);
+        text2.setText(R.string.a + ran);
 
 
 
